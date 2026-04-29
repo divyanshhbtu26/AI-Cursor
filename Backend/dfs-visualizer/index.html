@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFS Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DFS Visualizer</h1>
+        <div class="controls">
+            <label for="nodes">Number of Nodes:</label>
+            <input type="number" id="nodes" value="5" min="2" max="15">
+            <button id="generateGraph">Generate Graph</button>
+            <button id="startDFS">Start DFS</button>
+            <button id="resetGraph">Reset</button>
+        </div>
+        <div class="graph-container">
+            <canvas id="graphCanvas"></canvas>
+        </div>
+        <div class="dfs-output">
+            <h2>DFS Traversal Order:</h2>
+            <p id="output"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

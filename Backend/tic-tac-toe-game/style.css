@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #333;
+}
+
+.game-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+}
+
+h1 {
+    color: #d32f2f;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.score-display {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.score-display span {
+    font-weight: bold;
+    color: #fbc02d;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 0 auto 30px auto;
+    background-color: #fbc02d;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 5px solid #d32f2f;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ffe082;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #ffca28;
+}
+
+.cell.x::before {
+    content: 'X';
+    color: black;
+}
+
+.cell.o::before {
+    content: 'O';
+    color: white;
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.game-status {
+    margin-top: 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #d32f2f;
+    min-height: 1.5em;
+}
+
+#restart-button {
+    background-color: #fbc02d;
+    color: #d32f2f;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+#restart-button:hover {
+    background-color: #ffb300;
+    transform: translateY(-2px);
+}
+
